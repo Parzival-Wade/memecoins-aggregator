@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+  "api-runner": "ts-node src/api-runner.ts",
+  "aggregator-runner": "ts-node src/aggregator-runner.ts",
+  "ws-runner": "ts-node src/ws-runner.ts",
+  "worker-runner": "ts-node src/worker-runner.ts",
+  "build": "tsc"
+
   },
   "keywords": [],
   "author": "",
