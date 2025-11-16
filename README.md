@@ -159,26 +159,21 @@ docker run -p 6379:6379 --name eterna-redis -d redis:7-alpine
 ```bash
 # from project root
 npx ts-node src/api-runner.ts
-# or if you added npm scripts:
-# npm run start:api
 ```
 
 3. **Aggregator**
 ```bash
 npx ts-node src/aggregator-runner.ts
-# or npm run start:aggregator
 ```
 
 4. **WebSocket server**
 ```bash
 npx ts-node src/ws-runner.ts
-# or npm run start:ws
 ```
 
 5. **Worker(s) / Fetchers**
 ```bash
 npx ts-node src/worker-runner.ts
-# or npm run start:workers
 ```
 
 > The order matters because:
