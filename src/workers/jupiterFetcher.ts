@@ -1,24 +1,6 @@
 import { http, limit } from "../lib/httpClient";
 import { ingestApi } from "../lib/internalApi";
-
-function normalizeJup(addrRaw: string, j: any) {
-  // normalize address (lowercase & trimmed)
-  const token_address = addrRaw?.toString()?.trim();
-
-  if (!token_address) return null;
-
-  const price = j?.usdPrice;
-  const price_change_24h = j?.priceChange24h;
-
-  return {
-    token_address,
-    price: price !== undefined ? Number(price) : undefined,
-    price_change_24h: price_change_24h !== undefined ? Number(price_change_24h) : undefined,
-    source: "jup",
-    fetched_at: Date.now(),
-  };
-}
-
+import { normalizeJup } from "../normalizers/jup";
 export async function fetchJupiter(addresses: string[]) {
   try {
     if (!addresses || addresses.length === 0) return;
