@@ -9,7 +9,9 @@
   "aggregator-runner": "ts-node src/aggregator-runner.ts",
   "ws-runner": "ts-node src/ws-runner.ts",
   "worker-runner": "ts-node src/worker-runner.ts",
-  "build": "tsc"
+  "build": "tsc",
+    "start": "node dist/server/api-runner.js"
+
 
   },
   "keywords": [],
